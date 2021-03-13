@@ -24,7 +24,6 @@ panned using characters entered in the window. Enter "h" for directions
 in the window.
 
 ## UNFOLDING DEVELOPMENT
-
 This routine is useful but uses code with a very long pedigree that
 is being redeveloped, and is subject to change without notice.
 
@@ -38,34 +37,9 @@ is being redeveloped, and is subject to change without notice.
    descriptions of the manpages is at 
    [BOOK_M_draw](https://urbanjost.github.io/M_slices/BOOK_M_slices.html).
 
-## BUILDING THE MODULE USING make(1)
-     git clone https://github.com/urbanjost/M_slices.git
-     cd M_slices/src
-     # change Makefile if not using one of the listed compilers
-     
-     # for gfortran
-     make clean
-     make F90=gfortran gfortran
-     
-     # for ifort
-     make clean
-     make F90=ifort ifort
-
-     # for nvfortran
-     make clean
-     make F90=nvfortran nvfortran
-
-This will compile the Fortran module and basic example
-program that exercise the routine.
-
-
-## UNIT TESTS ![-](docs/images/testtube.gif)
-   Running the example programs and test programs tests basic
-   functionality. There is currently no unit tests, per-se.
-
 ## SUPPORTS FPM ![-](docs/images/fpm_logo.gif)
 
-   Alternatively, download the github repository and build it with
+   download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
 
    ```bash
@@ -81,3 +55,7 @@ program that exercise the routine.
         [dependencies]
         M_slices        = { git = "https://github.com/urbanjost/M_slices.git" }
 ```
+## UNIT TESTS ![-](docs/images/testtube.gif)
+   Running the example programs and test programs tests basic
+   functionality. There is currently no unit tests, per-se.
+
