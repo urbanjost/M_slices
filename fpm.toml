@@ -1,0 +1,22 @@
+# TOML file for fpm as described at https://github.com/fortran-lang/fpm/blob/master/manifest-reference.md
+name = "slices"
+version = "0.1.0"
+license = "MIT"
+author = "John S. Urban"
+maintainer = "urbanjost@comcast.net"
+copyright = "Copyright 2020, John S. Urban"
+categories = ["graphics"]
+keywords = ["fortran", "plot", "graph" ]
+homepage = "https://github.com/urbanjost/M_slices.git"
+
+[dependencies]
+M_draw       =  {  git  =  "https://github.com/urbanjost/M_draw.git"       }
+M_io         =  {  git  =  "https://github.com/urbanjost/M_io.git"         }
+M_strings    =  {  git  =  "https://github.com/urbanjost/M_strings.git"    }
+M_kracken95  =  {  git  =  "https://github.com/urbanjost/M_kracken95.git"  }
+M_msg        =  {  git  =  "https://github.com/urbanjost/M_msg.git"        }
+
+[[ executable ]]
+name = "slices"
+source-dir = "app/"
+main = "slice.f90"
