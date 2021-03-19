@@ -5,6 +5,7 @@ license = "MIT"
 author = "John S. Urban"
 maintainer = "urbanjost@comcast.net"
 copyright = "Copyright 2020, John S. Urban"
+description = " produce basic slice plot on POSIX systems with X11 Windows"
 categories = ["graphics"]
 keywords = ["fortran", "plot", "graph" ]
 homepage = "https://github.com/urbanjost/M_slices.git"
