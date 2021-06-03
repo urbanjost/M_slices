@@ -131,7 +131,7 @@ help_text=[ CHARACTER(LEN=128) :: &
 '@(#)VERSION:        1.1, 20190326>',&
 '@(#)AUTHOR:         John S. Urban>',&
 '@(#)HOME PAGE:      http://www.urbanjost.altervista.org/index.html>',&
-'@(#)COMPILED:       Fri, Mar 12th, 2021 9:49:33 PM>',&
+'@(#)COMPILED:       Tue, Mar 23rd, 2021 9:05:52 PM>',&
 '']
    WRITE(*,'(a)')(trim(help_text(i)(5:len_trim(help_text(i),kind=kind(1))-1)),i=1,size(help_text))
    stop ! if -version was specified, stop
@@ -188,7 +188,7 @@ integer                      :: w
       call prefsize(ixsize,iysize)
    else
       call prefsize(ixsize,iysize)
-      call voutput(str(filename,'_',int(a),'x',int(b),'.',device,nospace=.true.))
+      call voutput(str(filename,'_',int(a),'x',int(b),'.',device,sep=''))
    endif
    call vinit(device)
    call vsetflush(.false.)
