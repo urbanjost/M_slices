@@ -237,6 +237,8 @@ real :: zlen
    else
       maxsize_local=204800
    endif
+   if(allocated(h))deallocate(h)
+   if(allocated(p))deallocate(p)
    allocate(h(maxsize_local,2))
    allocate(p(maxsize_local,2))
 !
@@ -258,6 +260,8 @@ real :: zlen
    endif
    if(alpha.lt.0..or.alpha.gt.88..or.beta.lt.1..or.beta.gt.90.)then
       write(*,*)'("*** dl_slices INPUT ANGLE ERROR ***") ALPHA=',alpha,'(allowed 0 to 88) BETA=',beta,'(allowed 1 to 90)'
+      if(allocated(h))deallocate(h)
+      if(allocated(p))deallocate(p)
       return
    endif
    if (amax.eq.aminq) then
@@ -577,7 +581,10 @@ real :: zlen
 !
    enddo mainloop
 !
-520 call move_(0.,0.)   ! PEN UP
+520 continue
+   call move_(0.,0.)   ! PEN UP
+   if(allocated(h))deallocate(h)
+   if(allocated(p))deallocate(p)
    return
 999 continue
    write(*,3002)
@@ -1359,9 +1366,7 @@ character(len=8)  :: fb1 ! WORKING BUFFERS
       endif
       write(b,fb1,err=90) z
       if (iff.eq.1) then  ! REMOVE LEADING SPACES
-         do i=1,18
-            if (b(1:1).eq.' ') b=b(2:18)
-         enddo
+         b=adjustl(b)
       endif
    endif
 50 continue

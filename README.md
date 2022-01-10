@@ -45,8 +45,8 @@ is being redeveloped, and is subject to change without notice.
    ```bash
         git clone https://github.com/urbanjost/M_slices.git
         cd M_slices
-        fpm run
-        fpm run --example
+        fpm run "*"
+        fpm run --example "*"
         fpm test
    ```
    or just list it as a dependency in your fpm.toml project file.
