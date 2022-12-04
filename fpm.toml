@@ -17,7 +17,7 @@ M_strings    =  {  git  =  "https://github.com/urbanjost/M_strings.git"    }
 M_kracken95  =  {  git  =  "https://github.com/urbanjost/M_kracken95.git"  }
 M_msg        =  {  git  =  "https://github.com/urbanjost/M_msg.git"        }
 
-[[ executable ]]
+[[executable]]
 name = "slices"
 source-dir = "app/"
 main = "slice.f90"

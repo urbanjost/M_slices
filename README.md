@@ -27,14 +27,15 @@ in the window.
 This routine is useful but uses code with a very long pedigree that
 is being redeveloped, and is subject to change without notice.
 
-## USER DOCUMENTATION
+## DOCUMENTATION   ![docs](docs/images/docs.gif)
+### USER
    - a simple index to the man-pages for the
-   [routines](https://urbanjost.github.io/M_slices/man3.html) 
-   and [programs](https://urbanjost.github.io/M_slices/man1.html) 
+   [routines](https://urbanjost.github.io/M_slices/man3.html)
+   and [programs](https://urbanjost.github.io/M_slices/man1.html)
    in HTML form.
 
    - A single page that uses javascript to combine all the HTML
-   descriptions of the manpages is at 
+   descriptions of the man-pages is at
    [BOOK_M_draw](https://urbanjost.github.io/M_slices/BOOK_M_slices.html).
 
 ## SUPPORTS FPM ![-](docs/images/fpm_logo.gif)
@@ -58,4 +59,3 @@ is being redeveloped, and is subject to change without notice.
 ## UNIT TESTS ![-](docs/images/testtube.gif)
    Running the example programs and test programs tests basic
    functionality. There is currently no unit tests, per-se.
-
