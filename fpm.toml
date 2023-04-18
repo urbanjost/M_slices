@@ -1,4 +1,4 @@
-# TOML file for fpm as described at https://github.com/fortran-lang/fpm/blob/master/manifest-reference.md
+# TOML file for fpm as described at https://fpm.fortran-lang.org/en/spec/manifest.html
 name = "M_slices"
 version = "0.1.0"
 license = "MIT"
@@ -10,12 +10,15 @@ categories = ["graphics"]
 keywords = ["fortran", "plot", "graph" ]
 homepage = "https://github.com/urbanjost/M_slices.git"
 
+[build]
+module-naming = true
+
 [dependencies]
 M_draw       =  {  git  =  "https://github.com/urbanjost/M_draw.git"       }
 M_io         =  {  git  =  "https://github.com/urbanjost/M_io.git"         }
 M_strings    =  {  git  =  "https://github.com/urbanjost/M_strings.git"    }
 M_kracken95  =  {  git  =  "https://github.com/urbanjost/M_kracken95.git"  }
-M_msg        =  {  git  =  "https://github.com/urbanjost/M_msg.git"        }
+M_framework  =  {  git  =  "https://github.com/urbanjost/M_framework.git"  }
 
 [[executable]]
 name = "slices"

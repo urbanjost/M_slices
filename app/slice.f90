@@ -1,9 +1,9 @@
 program slice
-use M_io, only        : slurp
-use M_strings,   only : s2vs
-use M_kracken95, only : kracken,iget,lget,rget,sget
+use M_io,             only : slurp
+use M_strings,        only : s2vs
+use M_kracken95,      only : kracken,iget,lget,rget,sget
 use M_draw
-use M_msg,       only : str
+use M_framework__msg, only : str
 implicit none
 character(len=1),allocatable :: text(:) ! array to hold file in memory
 integer                      :: length
@@ -270,7 +270,7 @@ help_text=[ CHARACTER(LEN=128) :: &
 '@(#)VERSION:        1.1, 20190326>',&
 '@(#)AUTHOR:         John S. Urban>',&
 '@(#)HOME PAGE:      http://www.urbanjost.altervista.org/index.html>',&
-'@(#)COMPILED:       2023-04-12 19:51:21 UTC-240>',&
+'@(#)COMPILED:       2023-04-18 09:16:23 UTC-240>',&
 '']
    WRITE(*,'(a)')(trim(help_text(i)(5:len_trim(help_text(i))-1)),i=1,size(help_text))
    stop ! if --version was specified, stop
