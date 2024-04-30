@@ -12,15 +12,25 @@ homepage = "https://github.com/urbanjost/M_slices.git"
 
 [build]
 module-naming = true
+#auto-executables = true
+auto-tests = true
+auto-examples = true
+#link = ["wif97" ]
 
 [dependencies]
-M_draw       =  {  namespace = "GPF" }
-M_io         =  {  namespace = "GPF" }
-M_strings    =  {  namespace = "GPF" }
-M_kracken95  =  {  namespace = "GPF" }
-M_framework = {namespace = "GPF"}
+M_draw       =  {  git  =  "https://github.com/urbanjost/M_draw.git"       }
+M_io         =  {  git  =  "https://github.com/urbanjost/M_io.git"         }
+M_strings    =  {  git  =  "https://github.com/urbanjost/M_strings.git"    }
+M_kracken95  =  {  git  =  "https://github.com/urbanjost/M_kracken95.git"  }
+M_framework  =  {  git  =  "https://github.com/urbanjost/M_framework.git"  }
+#M_draw       =  {  namespace = "GPF" }
+#M_io         =  {  namespace = "GPF" }
+#M_strings    =  {  namespace = "GPF" }
+#M_kracken95  =  {  namespace = "GPF" }
+#M_framework = {namespace = "GPF"}
 
 [[executable]]
 name = "slices"
 source-dir = "app/"
 main = "slice.f90"
+

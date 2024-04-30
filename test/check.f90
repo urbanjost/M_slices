@@ -1,6 +1,6 @@
-subroutine test_suite_M_slices()
-use M_verify, only : unit_check_start,unit_check,unit_check_done,unit_check_good,unit_check_bad,unit_check_msg
-use M_verify, only : unit_check_level
+program M_slices_test_suite
+use M_framework__verify, only : unit_check_start,unit_check,unit_check_done,unit_check_good,unit_check_bad,unit_check_msg
+use M_framework__verify, only : unit_check_level
 
 !! setup
    call test_dl_init()
@@ -30,7 +30,6 @@ subroutine test_dl_symbol()
    call unit_check_done('dl_symbol',msg='')
 end subroutine test_dl_symbol
 !===================================================================================================================================
-end subroutine test_suite_M_slices
-!==================================================================================================================================!
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()!
 !==================================================================================================================================!
+end program M_slices_test_suite
